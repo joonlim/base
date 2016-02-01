@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+if(require.main === module) {
+
+	if (process.argv.length < 5) {
+		console.log("\n  Usage: base number original_base new_base\n")
+	} else {
+		var number = process.argv[2]
+		var originalBase = parseInt(process.argv[3], 10)
+		var newBase = parseInt(process.argv[4], 10)
+
+		var newNumber = parseInt(number, originalBase)
+		var newNumBase = newNumber.toString(newBase)
+
+		console.log(newNumBase)
+	}
+}
